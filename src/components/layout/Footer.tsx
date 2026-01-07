@@ -14,6 +14,7 @@ const Footer = () => {
     legal: [
       { name: "Privacy Policy", path: "/privacy" },
       { name: "Disclaimer", path: "/disclaimer" },
+      { name: "Refund & Guarantee Policy", path: "/refund-policy" },
     ],
     contact: [
       { name: "Contact Us", path: "/contact" },
