@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, MessageCircle } from "lucide-react";
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -9,10 +9,26 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon: Icon, title, description, scope, disclaimer }: ServiceCardProps) => {
+  const whatsappNumber = "1234567890"; // Replace with actual WhatsApp number
+  const whatsappMessage = encodeURIComponent(`Hello, I'm interested in your ${title} service. Please provide more information.`);
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
   return (
     <div className="glass-card-hover rounded-2xl p-8 h-full flex flex-col">
-      <div className="inline-flex p-4 rounded-xl bg-primary/10 mb-6 self-start">
-        <Icon className="w-8 h-8 text-primary" />
+      <div className="flex items-start justify-between mb-6">
+        <div className="inline-flex p-4 rounded-xl bg-primary/10">
+          <Icon className="w-8 h-8 text-primary" />
+        </div>
+        
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-600/10 hover:bg-green-600/20 border border-green-600/30 transition-all duration-300 group"
+        >
+          <MessageCircle className="w-5 h-5 text-green-500 group-hover:scale-110 transition-transform" />
+          <span className="text-sm font-medium text-green-500">Message</span>
+        </a>
       </div>
       
       <h3 className="font-display text-2xl font-bold mb-4">{title}</h3>
