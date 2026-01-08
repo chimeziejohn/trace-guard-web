@@ -115,8 +115,126 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Transparent Pricing Section */}
       <section className="section-padding bg-secondary/30">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
+                Transparent <span className="gradient-text">Pricing</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                All services are billed as upfront professional service fees. We do not operate on 
+                performance-based, contingency, or recovery-percentage models.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {/* Initial Consultation */}
+              <div className="glass-card p-6 rounded-xl border border-border/50">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-display text-xl font-semibold">Initial Consultation</h3>
+                  <span className="text-primary font-bold text-lg">$150</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">Upfront Fee</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Confidential case review
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Feasibility assessment
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Professional guidance
+                  </li>
+                </ul>
+              </div>
+
+              {/* Account Recovery Assistance */}
+              <div className="glass-card p-6 rounded-xl border border-border/50">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-display text-xl font-semibold">Account Recovery Assistance</h3>
+                  <span className="text-primary font-bold text-lg">$500 – $1,200</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">Based on complexity</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Documentation preparation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Provider coordination support
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Lawful recovery guidance
+                  </li>
+                </ul>
+              </div>
+
+              {/* Stolen Funds Tracing */}
+              <div className="glass-card p-6 rounded-xl border border-border/50">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-display text-xl font-semibold">Stolen Funds Tracing</h3>
+                  <span className="text-primary font-bold text-lg">$1,000 – $3,500</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">Comprehensive analysis</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Blockchain transaction analysis
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Digital transaction tracking
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Structured tracing report
+                  </li>
+                </ul>
+              </div>
+
+              {/* Fraud Investigation */}
+              <div className="glass-card p-6 rounded-xl border border-border/50">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-display text-xl font-semibold">Fraud Investigation & Reporting</h3>
+                  <span className="text-primary font-bold text-lg">$800 – $2,500</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">Full investigation</p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Scam investigation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Evidence documentation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Reporting guidance
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Disclaimer */}
+            <div className="mt-8 p-4 bg-primary/10 border border-primary/20 rounded-lg text-center">
+              <p className="text-primary font-medium">
+                Final pricing is always confirmed before work begins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl sm:text-4xl font-bold mb-6">
