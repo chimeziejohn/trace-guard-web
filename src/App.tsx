@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
 import RefundPolicy from "./pages/RefundPolicy";
+import Reports from "./pages/Reports";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="/refund-policy" element={<RefundPolicy />} />
+              <Route path="/reports" element={<Reports />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
