@@ -9,7 +9,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon: Icon, title, description, scope, disclaimer }: ServiceCardProps) => {
-  const whatsappNumber = "1234567890"; // Replace with actual WhatsApp number
+  const whatsappNumber = "+2347062283218""; // Replace with actual WhatsApp number
   const whatsappMessage = encodeURIComponent(`Hello, I'm interested in your ${title} service. Please provide more information.`);
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
