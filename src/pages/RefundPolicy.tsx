@@ -255,51 +255,92 @@ const RefundPolicy = () => {
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-8">
-                We believe in clear, upfront pricing with no hidden fees. All costs are discussed 
-                and agreed upon before any work begins.
+                All services are billed as <strong className="text-foreground">upfront professional service fees</strong>. 
+                We do not operate on performance-based, contingency, or recovery-percentage models.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="glass-card p-6 rounded-xl border border-border">
-                  <Clock className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Initial Consultation
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    Complimentary case evaluation to understand your situation and determine 
-                    if our services can assist you.
-                  </p>
-                  <p className="text-2xl font-bold text-primary">Free</p>
+              <h3 className="text-2xl font-heading font-semibold text-foreground mb-6">
+                Pricing Overview
+              </h3>
+
+              <div className="space-y-6 mb-8">
+                {/* Initial Consultation */}
+                <div className="glass-card p-6 rounded-xl border border-primary/20">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">
+                        Initial Consultation
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Confidential case review, feasibility assessment, and professional guidance.
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl font-bold text-primary">$150</span>
+                      <span className="text-muted-foreground ml-2">(Upfront)</span>
+                    </div>
+                  </div>
                 </div>
 
+                {/* Account Recovery Assistance */}
                 <div className="glass-card p-6 rounded-xl border border-border">
-                  <FileText className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Custom Engagement
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    Pricing based on case complexity, scope of investigation, and resources required.
-                  </p>
-                  <p className="text-2xl font-bold text-primary">Quote-Based</p>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">
+                        Account Recovery Assistance
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Documentation, provider coordination support, and lawful recovery guidance (pricing based on complexity).
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl font-bold text-primary">$500 – $1,200</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stolen Funds Tracing */}
+                <div className="glass-card p-6 rounded-xl border border-border">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">
+                        Stolen Funds Tracing
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Blockchain or digital transaction analysis with a structured tracing report.
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl font-bold text-primary">$1,000 – $3,500</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Fraud Investigation & Reporting */}
+                <div className="glass-card p-6 rounded-xl border border-border">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">
+                        Fraud Investigation & Reporting
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Scam investigation, evidence documentation, and reporting guidance.
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl font-bold text-primary">$800 – $2,500</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-card rounded-xl border border-border">
-                <h4 className="font-semibold text-foreground mb-4">What's Included in Every Engagement:</h4>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {[
-                    "Detailed written scope of work",
-                    "Clear cost breakdown before payment",
-                    "Regular progress updates",
-                    "Comprehensive final report",
-                    "Secure communication channels",
-                    "Post-engagement support guidance"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
+              {/* Final Pricing Disclaimer */}
+              <div className="p-6 bg-primary/10 rounded-xl border border-primary/30">
+                <div className="flex items-center gap-3">
+                  <AlertCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                  <p className="text-foreground font-medium text-lg">
+                    Final pricing is always confirmed before work begins.
+                  </p>
                 </div>
               </div>
             </div>
