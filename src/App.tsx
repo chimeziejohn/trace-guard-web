@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
 import RefundPolicy from "./pages/RefundPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import Pricing from "./pages/Pricing";
 import Reports from "./pages/Reports";
 import NotFound from "./pages/NotFound";
 
@@ -38,6 +40,8 @@ const App = () => (
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="/refund-policy" element={<RefundPolicy />} />
+              <Route path="/terms-conditions" element={<TermsConditions />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
