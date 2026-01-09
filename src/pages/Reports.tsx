@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -31,9 +33,20 @@ const statusConfig: Record<string, { label: string; variant: "default" | "second
 const Reports = () => {
   const [reports, setReports] = useState<Report[]>([]);
   const [loading, setLoading] = useState(true);
+  const { user, loading: authLoading, isAdmin } = useAuth();
+  const navigate = useNavigate();
+
+  // Redirect to auth if not logged in
+  useEffect(() => {
+    if (!authLoading && !user) {
+      navigate("/auth");
+    }
+  }, [user, authLoading, navigate]);
 
   useEffect(() => {
     const fetchReports = async () => {
+      if (!user) return;
+      
       const { data, error } = await supabase
         .from("reports")
         .select("*")
@@ -47,8 +60,24 @@ const Reports = () => {
       setLoading(false);
     };
 
-    fetchReports();
-  }, []);
+    if (user) {
+      fetchReports();
+    }
+  }, [user]);
+
+  // Show loading while checking auth
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-muted-foreground">Loading...</p>
+      </div>
+    );
+  }
+
+  // Don't render if not authenticated (will redirect)
+  if (!user) {
+    return null;
+  }
 
   const getStatusBadge = (status: string) => {
     const config = statusConfig[status] || statusConfig.pending;

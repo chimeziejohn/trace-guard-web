@@ -17,6 +17,7 @@ import RefundPolicy from "./pages/RefundPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import Pricing from "./pages/Pricing";
 import Reports from "./pages/Reports";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/auth" element={<Auth />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
