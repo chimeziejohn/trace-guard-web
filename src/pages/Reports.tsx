@@ -53,7 +53,10 @@ const Reports = () => {
         .order("created_at", { ascending: false });
 
       if (error) {
-        console.error("Error fetching reports:", error);
+        // Only log to console in development to prevent information leakage
+        if (import.meta.env.DEV) {
+          console.error("Error fetching reports:", error);
+        }
       } else {
         setReports(data || []);
       }
